@@ -1,11 +1,14 @@
-import React from "react";
-import "./App.scss";
-import { useRoutes } from "react-router-dom";
+import './App.scss'
+import '@/styles/antd.less'
+import { useRoutes } from 'react-router-dom'
+import { useSetRem } from './utils/use-set-rem'
+import Login from '@/modules/login'
 export function App() {
+  useSetRem()
   const routes = useRoutes([
-    { path: "login", element: <h1>登录页面🏮</h1> },
-    { path: "/", element: <div>hello world</div> },
-  ]);
+    { path: 'login', element: <Login /> },
+    { path: '/', element: <div>hello world</div> },
+  ])
 
-  return routes;
+  return routes
 }

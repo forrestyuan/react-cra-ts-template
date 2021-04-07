@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as BR } from "react-router-dom";
+import React from 'react'
+import { BrowserRouter as BR } from 'react-router-dom'
 
 export const BrowserRouter: React.FC = ({ children }) => {
   return (
@@ -8,5 +8,5 @@ export const BrowserRouter: React.FC = ({ children }) => {
         {children}
       </React.Suspense>
     </BR>
-  );
-};
+  )
+}

@@ -1,0 +1,108 @@
+// 详见: https://ant.design/docs/react/customize-theme-cn#%E9%85%8D%E7%BD%AE-less-%E5%8F%98%E9%87%8F%E6%96%87%E4%BB%B6
+@import '~antd/lib/style/themes/default.less';
+@import '~antd/dist/antd.less'; // 引入官方提供的 less 样式入口文件
+
+//UI color
+@color-primary-regular: #ffac00; // 全局主色
+@color-primary-light: #ffd070;
+@color-secondary: #6f7090;
+@color-utility-error: #ff5a50; // 错误色
+@color-utility-success: #00bd8d; // 成功色
+@color-utility-info: #379bff;
+@color-utility-warning: #ffb000; // 警告色
+@color-utility-gold: #ffd032;
+
+//font
+@color-text-30: #333333;
+@color-text-60: #6d6d6d;
+@color-text-90: #909090;
+@color-base-0: #f8f9fb; //主页背景色
+@color-base-1: #ffffff; //背景色
+@color-card: #fefefe; // light主题，白色字体、
+@color-dialog: #fdfdfd; //modal 弹窗 背景色
+
+@color-scale-1: #f5f5f5;
+@color-scale-2: #efefef; // hover 颜色
+@color-scale-3: #d6d6d6; // 输入框边框颜色
+@color-scale-4: #b0b0b0;
+
+//border
+@color-separator-20: rgba(#000000, 0.2);
+@color-separator-10: rgba(#000000, 0.1);
+
+//antd color reset
+@primary-color: @color-primary-regular;
+@link-color: @color-primary-regular; // 链接色;
+@text-color: @color-text-30;
+@text-color-secondary: @color-text-60;
+
+@border-radius-base: 4px; // input etc. radius
+@btn-border-radius-base: 6px; //Buttons radius
+
+@success-color: @color-utility-success; // 成功色
+@warning-color: @color-utility-warning; // 警告色
+@error-color: @color-utility-error; // 错误色
+@info-color: @color-utility-info; // 提示色
+
+@border-color-base: @color-scale-3; // input。 select等边框color
+@border-color-split: @color-separator-10; // modal header，modal footer等分割线color
+@zindex-message: 2000;
+// form表单基础高度
+@height-base: 36px;
+// 分页默认大小
+@pagination-item-size: 32px;
+// button没有阴影
+@btn-primary-shadow: none;
+@btn-shadow: none;
+// form label color
+@label-color: @color-text-60;
+
+.ant-btn{
+  font-weight: 400;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.ant-btn-primary[disabled],
+.ant-btn-primary[disabled]:hover {
+  background: @color-primary-regular;
+  border-color: @color-primary-regular;
+  color: @color-base-1;
+  opacity: 0.4;
+}
+
+// ie11 长句换行问题
+.ant-popover {
+  .ant-popover-inner-content {
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+}
+
+// ie11 dropdown 闪屏问题
+@media only screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .ant-dropdown,
+  .ant-select-dropdown,
+  .ant-picker-dropdown {
+    animation-duration: 0s !important;
+  }
+}
+
+// ie10 hack
+.ant-input-affix-wrapper {
+  .ant-input {
+    flex: 0 1 auto;
+  }
+}
+.ant-picker-input {
+  input {
+    flex: 0 1 auto !important;
+  }
+}
+
+// 去除表单label自带的margin
+.ant-form-item-label > label::after {
+  margin: 0 !important;
+}
+
