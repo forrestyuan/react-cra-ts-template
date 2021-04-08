@@ -1,5 +1,5 @@
 import { makeAutoObservable } from 'mobx'
-import { createStore } from '../../common/utils/create-store'
+import { createStore } from '@/common/utils/create-store'
 class LoginStore {
   constructor() {
     makeAutoObservable(this)
